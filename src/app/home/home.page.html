@@ -1,0 +1,31 @@
+<ion-header class="content-color">
+    <ion-toolbar class="content-color">
+        <img src="/assets/slides/sugoy000.jpg" class="avatar animated fadeIn">
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="content-color">
+
+    <ion-slides pager="true" class="slide-full">
+        <ion-slide *ngFor="let slide of slides ">
+            <ion-card>
+                <img [src]="slide.img" class="slide-image">
+
+                <ion-card-header>
+                    <ion-card-title>
+                        <ion-text style="color: white;">{{slide.titulo}}</ion-text>
+                    </ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    <a (click)="abrir(slide.url1,'_self')"  style="text-decoration:none">
+                        <ion-text style="color: white;">{{slide.desc}}</ion-text>
+                    </a>
+                </ion-card-content>
+
+            </ion-card>
+        </ion-slide>
+
+    </ion-slides>
+
+</ion-content>
